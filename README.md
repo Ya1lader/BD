@@ -42,7 +42,7 @@
 
 ![](/image/image24.png)
 
-### Схема
+## Схема
 
 ![](/image/imageф.png)
 
