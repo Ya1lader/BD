@@ -7,21 +7,26 @@
 ### Таблицы и их атрибуты
 
 #### Таблица `students`
+![](/image/image25.png)
 | Поле         | Тип         | Описание                        |
 |--------------|-------------|---------------------------------|
 | `student_id` | SERIAL      | Уникальный идентификатор студента |
 | `first_name` | VARCHAR(50) | Имя студента                    |
 | `last_name`  | VARCHAR(50) | Фамилия студента                |
 | `group_number`| VARCHAR(10)| Номер группы студента           |
+![](/image/image22.png)
 
 #### Таблица `courses`
+![](/image/image26.png)
 | Поле         | Тип         | Описание                        |
 |--------------|-------------|---------------------------------|
 | `course_id`  | SERIAL      | Уникальный идентификатор курса  |
 | `course_name`| VARCHAR(100)| Название курса                  |
 | `description`| TEXT        | Описание курса                  |
+![](/image/image23.png)
 
 #### Таблица `student_courses`
+![](/image/image27.png)
 | Поле         | Тип         | Описание                        |
 |--------------|-------------|---------------------------------|
 | `student_id` | INT         | Идентификатор студента (внешний ключ к `students.student_id`) |
@@ -29,6 +34,7 @@
 | PRIMARY KEY (`student_id`, `course_id`) | - | Первичный ключ, комбинирующий `student_id` и `course_id` |
 | FOREIGN KEY (`student_id`) REFERENCES `students`(`student_id`) | - | Внешний ключ на таблицу `students` |
 | FOREIGN KEY (`course_id`) REFERENCES `courses`(`course_id`)    | - | Внешний ключ на таблицу `courses`  |
+![](/image/image24.png)
 
 Демонстрация запросов
 #### 1. UNION
